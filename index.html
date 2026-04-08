@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>渡辺佳奈子 | 自己紹介</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+      background-color: #f8f5f0;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 60px 50px;
+      max-width: 480px;
+      width: 90%;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #c9a87c, #e8d5b0);
+      margin: 0 auto 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+    }
+
+    .name {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: #222;
+      margin-bottom: 6px;
+    }
+
+    .name-en {
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      color: #aaa;
+      text-transform: uppercase;
+      margin-bottom: 36px;
+    }
+
+    .divider {
+      width: 40px;
+      height: 2px;
+      background: #c9a87c;
+      margin: 0 auto 36px;
+      border-radius: 2px;
+    }
+
+    .info-list {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 40px;
+    }
+
+    .info-list li {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid #f0ebe4;
+      font-size: 15px;
+    }
+
+    .info-list li:last-child {
+      border-bottom: none;
+    }
+
+    .label {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: #c9a87c;
+      text-transform: uppercase;
+      font-weight: 600;
+      min-width: 56px;
+    }
+
+    .value {
+      color: #444;
+      font-size: 15px;
+    }
+
+    .message {
+      background: #f8f5f0;
+      border-radius: 12px;
+      padding: 20px 24px;
+      font-size: 14px;
+      color: #666;
+      line-height: 1.8;
+      font-style: italic;
+    }
+
+    .message::before {
+      content: '"';
+      font-size: 28px;
+      color: #c9a87c;
+      line-height: 0;
+      vertical-align: -10px;
+      margin-right: 4px;
+    }
+
+    .message::after {
+      content: '"';
+      font-size: 28px;
+      color: #c9a87c;
+      line-height: 0;
+      vertical-align: -10px;
+      margin-left: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="avatar">🌿</div>
+    <h1 class="name">渡辺 佳奈子</h1>
+    <p class="name-en">Kanako Watanabe</p>
+    <div class="divider"></div>
+
+    <ul class="info-list">
+      <li>
+        <span class="label">職業</span>
+        <span class="value">不動産会社勤務</span>
+      </li>
+      <li>
+        <span class="label">趣味</span>
+        <span class="value">読書</span>
+      </li>
+    </ul>
+
+    <p class="message">Cursorで作ったはじめての自己紹介ページです！</p>
+  </div>
+</body>
+</html>
