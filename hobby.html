@@ -17,20 +17,46 @@
       color: #333;
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
     }
 
-    .card {
-      background: #fff;
-      border-radius: 20px;
-      padding: 60px 50px;
-      max-width: 480px;
-      width: 90%;
-      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
-      text-align: center;
+    /* ── アニメーション定義 ── */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
+    @keyframes floatIcon {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-6px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    /* ── カード ── */
+    .card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 60px 50px 48px;
+      max-width: 480px;
+      width: 90%;
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.09);
+      text-align: center;
+      animation: fadeInUp 0.7s ease both;
+    }
+
+    /* ── アイコン ── */
     .icon {
       width: 90px;
       height: 90px;
@@ -41,6 +67,8 @@
       align-items: center;
       justify-content: center;
       font-size: 40px;
+      animation: floatIcon 3.6s ease-in-out infinite;
+      box-shadow: 0 6px 20px rgba(201, 168, 124, 0.35);
     }
 
     .title {
@@ -49,6 +77,7 @@
       letter-spacing: 0.05em;
       color: #222;
       margin-bottom: 6px;
+      animation: fadeIn 0.9s ease 0.2s both;
     }
 
     .subtitle {
@@ -57,16 +86,19 @@
       color: #aaa;
       text-transform: uppercase;
       margin-bottom: 36px;
+      animation: fadeIn 0.9s ease 0.35s both;
     }
 
     .divider {
       width: 40px;
       height: 2px;
-      background: #c9a87c;
+      background: linear-gradient(90deg, #c9a87c, #e8d5b0);
       margin: 0 auto 36px;
       border-radius: 2px;
+      animation: fadeIn 0.9s ease 0.45s both;
     }
 
+    /* ── 情報リスト ── */
     .info-list {
       list-style: none;
       text-align: left;
@@ -80,7 +112,13 @@
       padding: 14px 0;
       border-bottom: 1px solid #f0ebe4;
       font-size: 15px;
+      opacity: 0;
+      animation: fadeInUp 0.55s ease forwards;
     }
+
+    .info-list li:nth-child(1) { animation-delay: 0.5s; }
+    .info-list li:nth-child(2) { animation-delay: 0.65s; }
+    .info-list li:nth-child(3) { animation-delay: 0.8s; }
 
     .info-list li:last-child {
       border-bottom: none;
@@ -100,18 +138,20 @@
       font-size: 15px;
     }
 
+    /* ── メッセージ枠 ── */
     .message {
       background: #f8f5f0;
-      border-radius: 12px;
+      border-radius: 14px;
       padding: 20px 24px;
       font-size: 14px;
       color: #666;
       line-height: 1.8;
       font-style: italic;
+      animation: fadeIn 0.9s ease 0.9s both;
     }
 
     .message::before {
-      content: '"';
+      content: '\201C';
       font-size: 28px;
       color: #c9a87c;
       line-height: 0;
@@ -120,7 +160,7 @@
     }
 
     .message::after {
-      content: '"';
+      content: '\201D';
       font-size: 28px;
       color: #c9a87c;
       line-height: 0;
@@ -128,17 +168,40 @@
       margin-left: 4px;
     }
 
+    /* ── 戻るリンク ── */
     .back-link {
       display: inline-block;
       margin-top: 32px;
-      font-size: 13px;
-      color: #c9a87c;
+      padding: 12px 34px;
+      background: linear-gradient(135deg, #c9a87c, #e8d5b0);
+      color: #7a5c3a;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
       text-decoration: none;
-      letter-spacing: 0.08em;
+      border-radius: 50px;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, opacity 0.22s ease;
+      box-shadow: 0 4px 16px rgba(201, 168, 124, 0.3);
+      animation: fadeIn 0.9s ease 1.05s both;
     }
 
     .back-link:hover {
-      text-decoration: underline;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(201, 168, 124, 0.45);
+      opacity: 0.92;
+    }
+
+    .back-link:active {
+      transform: translateY(0);
+    }
+
+    /* ── フッター ── */
+    footer {
+      margin-top: 28px;
+      font-size: 12px;
+      color: #bbb;
+      letter-spacing: 0.08em;
+      animation: fadeIn 1s ease 1.2s both;
     }
   </style>
 </head>
@@ -164,5 +227,7 @@
 
     <a class="back-link" href="index.html">← 自己紹介に戻る</a>
   </div>
+
+  <footer>© 2026 K.W.</footer>
 </body>
 </html>
