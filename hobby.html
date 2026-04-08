@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>渡辺佳奈子 | 自己紹介</title>
+  <title>渡辺佳奈子 | 趣味：読書</title>
   <style>
     * {
       margin: 0;
@@ -31,7 +31,7 @@
       text-align: center;
     }
 
-    .avatar {
+    .icon {
       width: 90px;
       height: 90px;
       border-radius: 50%;
@@ -40,21 +40,18 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 28px;
-      font-weight: 700;
-      color: #7a5c3a;
-      letter-spacing: 0.05em;
+      font-size: 40px;
     }
 
-    .name {
-      font-size: 38px;
+    .title {
+      font-size: 32px;
       font-weight: 700;
       letter-spacing: 0.05em;
       color: #222;
       margin-bottom: 6px;
     }
 
-    .name-en {
+    .subtitle {
       font-size: 13px;
       letter-spacing: 0.15em;
       color: #aaa;
@@ -95,7 +92,7 @@
       color: #c9a87c;
       text-transform: uppercase;
       font-weight: 600;
-      min-width: 56px;
+      min-width: 72px;
     }
 
     .value {
@@ -111,7 +108,6 @@
       color: #666;
       line-height: 1.8;
       font-style: italic;
-      white-space: nowrap;
     }
 
     .message::before {
@@ -132,45 +128,41 @@
       margin-left: 4px;
     }
 
-    .btn {
+    .back-link {
       display: inline-block;
       margin-top: 32px;
-      padding: 12px 32px;
-      background: linear-gradient(135deg, #c9a87c, #e8d5b0);
-      color: #7a5c3a;
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
+      font-size: 13px;
+      color: #c9a87c;
       text-decoration: none;
-      border-radius: 50px;
-      transition: opacity 0.2s;
+      letter-spacing: 0.08em;
     }
 
-    .btn:hover {
-      opacity: 0.8;
+    .back-link:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <div class="avatar">🐈‍⬛</div>
-    <h1 class="name">渡辺 佳奈子</h1>
-    <p class="name-en">Kanako Watanabe</p>
+    <div class="icon">📚</div>
+    <h1 class="title">趣味：読書</h1>
+    <p class="subtitle">Hobby — Reading</p>
     <div class="divider"></div>
 
     <ul class="info-list">
       <li>
-        <span class="label">職業</span>
-        <span class="value">不動産会社勤務</span>
+        <span class="label">好きなジャンル</span>
+        <span class="value">ミステリー</span>
       </li>
       <li>
-        <span class="label">趣味</span>
-        <span class="value">読書</span>
+        <span class="label">最近読んだ本</span>
+        <span class="value">東野圭吾の作品</span>
       </li>
     </ul>
 
-    <p class="message">Cursorで作ったはじめての自己紹介ページです！</p>
-    <a class="btn" href="hobby.html">趣味ページへ</a>
+    <p class="message">好きな本のジャンルはミステリーです。最近読んだ本は東野圭吾の作品です。</p>
+
+    <a class="back-link" href="index.html">← 自己紹介に戻る</a>
   </div>
 </body>
 </html>
